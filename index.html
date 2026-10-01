@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>A Little Surprise 🎀</title>
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-family: Georgia, serif;
+      background: linear-gradient(135deg, #fff5f8, #ffe4ec);
+      color: #5a3d46;
+    }
+
+    .box {
+      padding: 35px 25px;
+      max-width: 500px;
+    }
+
+    .gift {
+      font-size: 90px;
+      cursor: pointer;
+      animation: bounce 1.5s infinite;
+    }
+
+    h1 {
+      font-size: 32px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    #surprise {
+      display: none;
+    }
+
+    button {
+      border: none;
+      padding: 13px 24px;
+      border-radius: 30px;
+      background: #ffffff;
+      color: #5a3d46;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-12px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box">
+
+    <div id="opening">
+      <div class="gift" onclick="openGift()">🎁</div>
+
+      <h1>A little something for you...</h1>
+
+      <p>Tap the gift 🎀</p>
+    </div>
+
+
+    <div id="surprise">
+
+      <h1>Happy Birthdayyy! 🎂💗</h1>
+
+      <p>
+        I made this tiny little corner of the internet just for you. 🌷
+      </p>
+
+      <p>
+        There's more coming soon... 👀
+      </p>
+
+      <button onclick="showMessage()">One more thing 💌</button>
+
+      <p id="message"></p>
+
+    </div>
+
+  </div>
+
+
+  <script>
+
+    function openGift() {
+      document.getElementById("opening").style.display = "none";
+      document.getElementById("surprise").style.display = "block";
+    }
+
+    function showMessage() {
+      document.getElementById("message").innerHTML =
+        "You deserve the happiest birthday and the loveliest year ahead. 🌷💗";
+    }
+
+  </script>
+
+</body>
+</html>
